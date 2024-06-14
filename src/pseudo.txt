@@ -1,0 +1,25 @@
+create an array of locations visited
+push on locations matrix[0][0]
+
+loop:
+    tens = divide by 10 Math.floor matrix value
+    units = matrix value % 10
+
+check if matrix[tens][units] === current locations
+    if so win and break out of loops
+    else:
+    repeat for matrix[tens][unit]
+
+function generateMatrix(inputArray) {
+    inputArray = take an array of 25 numbers
+    objectArray = []
+    for number of inputArray {
+        objectArray.push(object{location: number, x: number%10 - 1, y: Math.floor(number/10)-1})
+    }
+    matrix = split that into an array of 5 arrays of 5 numbers
+    return matrix
+}
+
+function getValueAtLocation(x, y, matrix) {
+
+}
