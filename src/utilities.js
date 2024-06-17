@@ -1,4 +1,4 @@
-function getNextLocationFromValue(matrixValue) {
+function getLocationFromValue(matrixValue) {
   return { row: Math.floor(matrixValue / 10), column: matrixValue % 10 };
 }
 
@@ -10,4 +10,4 @@ function generateMatrix(nums) {
   return matrix;
 }
 
-export { getNextLocationFromValue, generateMatrix };
+export { getLocationFromValue, generateMatrix };

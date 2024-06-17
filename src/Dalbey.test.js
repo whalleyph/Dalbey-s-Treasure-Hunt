@@ -1,5 +1,5 @@
 import { solveDalbey } from "./Dalbey.js";
-import { getNextLocationFromValue, generateMatrix } from "./utilities.js";
+import { getLocationFromValue, generateMatrix } from "./utilities.js";
 import { test, expect } from "@jest/globals";
 
 const nums = [
@@ -16,11 +16,11 @@ test("Test matrix 5 by 5", () => {
 });
 
 test("Test returns object with expected values", () => {
-  const result1 = getNextLocationFromValue(55);
+  const result1 = getLocationFromValue(55);
   expect(result1).toEqual({ row: 5, column: 5 });
-  const result2 = getNextLocationFromValue(24);
+  const result2 = getLocationFromValue(24);
   expect(result2).toEqual({ row: 2, column: 4 });
-  const result3 = getNextLocationFromValue(41);
+  const result3 = getLocationFromValue(41);
   expect(result3).toEqual({ row: 4, column: 1 });
 });
 

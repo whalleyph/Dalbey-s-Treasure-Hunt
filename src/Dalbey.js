@@ -1,4 +1,4 @@
-import { getNextLocationFromValue, generateMatrix } from "./utilities";
+import { getLocationFromValue, generateMatrix } from "./utilities";
 
 function solveDalbey(nums) {
   const matrix = generateMatrix(nums);
@@ -6,19 +6,13 @@ function solveDalbey(nums) {
   let currentLocation;
   let nextLocation;
   while (locationsVisited.length < 26) {
-    currentLocation = getNextLocationFromValue(
+    currentLocation = getLocationFromValue(
       locationsVisited[locationsVisited.length - 1]
     );
-    nextLocation = getNextLocationFromValue(
+    nextLocation = getLocationFromValue(
       matrix[currentLocation.row - 1][currentLocation.column - 1]
     );
 
-    // console.log(
-    //   nextLocation.row,
-    //   currentLocation.row,
-    //   nextLocation.column,
-    //   currentLocation.column
-    // );
     if (
       nextLocation.row === currentLocation.row &&
       nextLocation.column === currentLocation.column
@@ -29,7 +23,7 @@ function solveDalbey(nums) {
       matrix[currentLocation.row - 1][currentLocation.column - 1]
     );
   }
-  return "No treasure here!" + locationsVisited;
+  console.log("No treasure here!");
 }
 
 export { solveDalbey };
